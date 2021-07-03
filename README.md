@@ -7,7 +7,7 @@
 
 # Para usar as duas funcionalidades "cortavideo" e "juntavideo".
 * Na pasta que estiver o seu vídeo abra o Git bash --> Clique com o botão direito do mouse e selecione "Git Bash here".
-** ATENÇÃO!!! é o "Git Bash here", não é o "Git GUI here", mas se errou não tem problema é só fechar e abrir o correto.
+## ATENÇÃO!!! é o "Git Bash here", não é o "Git GUI here", mas se errou não tem problema é só fechar e abrir o correto.
 
 # Agora execute os comandos para cortar um vídeo:
 
