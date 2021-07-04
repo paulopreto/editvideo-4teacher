@@ -20,8 +20,8 @@ TE=`echo "$TIMEE" | tr : -`
 
 if [ $# -gt 3 ]; then
 	if [ $4 -eq 1 ]; then
-		#ffmpeg -i $FILENAME -ss "${TIMES}" -to "${TIMEE}" -vcodec libx264 -acodec aac "${DIRNAME}${COMPLEMENTO}"/"${DIRNAME}_${TS}_${TE}".mp4 -loglevel quiet -nostats -hide_banner
-		ffmpeg -i $FILENAME -ss "${TIMES}" -to "${TIMEE}" -vcodec libx265 -vtag hvc1 "${DIRNAME}${COMPLEMENTO}"/"${DIRNAME}_${TS}_${TE}".mp4 -loglevel quiet -nostats -hide_banner
+		#ffmpeg -i $FILENAME -ss "${TIMES}" -to "${TIMEE}" -vcodec libx264 -pix_fmt yuv420p -acodec aac "${DIRNAME}${COMPLEMENTO}"/"${DIRNAME}_${TS}_${TE}".mp4 -loglevel quiet -nostats -hide_banner
+		ffmpeg -i $FILENAME -ss "${TIMES}" -to "${TIMEE}" -vcodec libx265 -pix_fmt yuv420p -vtag hvc1 "${DIRNAME}${COMPLEMENTO}"/"${DIRNAME}_${TS}_${TE}".mp4 -loglevel quiet -nostats -hide_banner
 		echo -e "\nO arquivo além de cortado foi codificado em H265"
 	else
 		ffmpeg -ss "${TIMES}" -i $FILENAME -t "${TIMEE}" -vcodec copy -acodec copy "${DIRNAME}${COMPLEMENTO}"/"${DIRNAME}_${TS}_${TE}".mp4 -loglevel quiet -nostats -hide_banner
