@@ -2,7 +2,7 @@
 * Instale o Git.exe --> É só ir avançando dando next, next, next... até acabar.
 * Instale o vlc-3.0.16-win64.exe --> Também é só ir avançando.
 * PS. O VLC é opcional você pode usar qualquer Player de vídeo para anotar os tempos.
-* Faça Download do FFmpeg para Windows <https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z> 
+* Faça Download do FFmpeg para Windows <https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z> e copie os arquivo ffmpeg.exe, ffplay.exe e ffprobe.exe na pasta bin do PATH_programs/FFmpeg/bin/
 * Duplo clique com o botão esquerdo do mouse no arquivo install_parte1.bat
 * Clique com o direito e "Executar como administrador" o install_parte2.bat
 
