@@ -18,7 +18,7 @@ TS=`echo "$TIMES" | tr : -`
 TE=`echo "$TIMEE" | tr : -`
 
 
-if [ $# -ge 4 ]; then
+if [ $# -gt 3 ]; then
 	if [ $4 -eq 1 ]; then
 		#ffmpeg -i $FILENAME -ss "${TIMES}" -to "${TIMEE}" -vcodec libx264 -acodec aac "${DIRNAME}${COMPLEMENTO}"/"${DIRNAME}_${TS}_${TE}".mp4 -loglevel quiet -nostats -hide_banner
 		ffmpeg -i $FILENAME -ss "${TIMES}" -to "${TIMEE}" -vcodec libx265 -vtag hvc1 "${DIRNAME}${COMPLEMENTO}"/"${DIRNAME}_${TS}_${TE}".mp4 -loglevel quiet -nostats -hide_banner
