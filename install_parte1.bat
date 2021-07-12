@@ -12,5 +12,5 @@ copy PATH_programs\FFmpeg\presets\* C:\PATH_programs\FFmpeg\presets
 
 cls
 echo PRONTO ;)
-echo Agora execute  "install_parte2.bat" como administrador
+echo Agora execute "install_parte2.bat" como administrador
 pause
