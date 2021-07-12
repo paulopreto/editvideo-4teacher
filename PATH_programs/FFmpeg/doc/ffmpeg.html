@@ -974,6 +974,12 @@ output file already exists.
 loop -1 means infinite loop.
 </p>
 </dd>
+<dt><samp>-recast_media (<em>global</em>)</samp></dt>
+<dd><p>Allow forcing a decoder of a different media type than the one
+detected or designated by the demuxer. Useful for decoding media
+data muxed as data streams.
+</p>
+</dd>
 <dt><samp>-c[:<var>stream_specifier</var>] <var>codec</var> (<em>input/output,per-stream</em>)</samp></dt>
 <dt><samp>-codec[:<var>stream_specifier</var>] <var>codec</var> (<em>input/output,per-stream</em>)</samp></dt>
 <dd><p>Select an encoder (when used before an output file) or a decoder (when used

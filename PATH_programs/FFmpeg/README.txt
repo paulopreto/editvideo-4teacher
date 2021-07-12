@@ -1,10 +1,10 @@
 FFmpeg 64-bit static Windows build from www.gyan.dev
 
-Version: 2021-07-04-git-301d275301-full_build-www.gyan.dev
+Version: 2021-07-11-git-79ebdbb9b9-full_build-www.gyan.dev
 
 License: GPL v3
 
-Source Code: https://github.com/FFmpeg/FFmpeg/commit/301d275301
+Source Code: https://github.com/FFmpeg/FFmpeg/commit/79ebdbb9b9
 
 git-full build configuration: 
 
