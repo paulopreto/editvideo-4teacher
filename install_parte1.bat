@@ -11,6 +11,6 @@ copy PATH_programs\FFmpeg\doc\* C:\PATH_programs\FFmpeg\doc
 copy PATH_programs\FFmpeg\presets\* C:\PATH_programs\FFmpeg\presets
 
 cls
-echo PRONTO ELLEN ;)
-echo Agora execute  "install_ellen_parte2.bat" como administrador
+echo PRONTO ;)
+echo Agora execute  "install_parte2.bat" como administrador
 pause
