@@ -1,4 +1,4 @@
 @echo off
 setx /m PATH "C:\PATH_programs\FFmpeg\bin;%PATH%"
-echo Agora sim  Ellen, vai ser feliz com a suas aulas  :)
+echo Agora sim vai feliz com a edição das suas aulas  :)
 pause
