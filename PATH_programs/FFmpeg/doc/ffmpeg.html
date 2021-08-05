@@ -895,6 +895,14 @@ ffmpeg -cpuflags 0 ...
 </dl>
 
 </dd>
+<dt><samp>-cpucount <var>count</var> (<em>global</em>)</samp></dt>
+<dd><p>Override detection of CPU count. This option is intended
+for testing. Do not use it unless you know what you&rsquo;re doing.
+</p><div class="example">
+<pre class="example">ffmpeg -cpucount 2
+</pre></div>
+
+</dd>
 <dt><samp>-max_alloc <var>bytes</var></samp></dt>
 <dd><p>Set the maximum size limit for allocating a block on the heap by ffmpeg&rsquo;s
 family of malloc functions. Exercise <strong>extreme caution</strong> when using
@@ -1591,6 +1599,7 @@ such as <code>yadif</code> or <code>bwdif</code>, but deinterlacing introduces l
 <dt><samp>-force_key_frames[:<var>stream_specifier</var>] <var>time</var>[,<var>time</var>...] (<em>output,per-stream</em>)</samp></dt>
 <dt><samp>-force_key_frames[:<var>stream_specifier</var>] expr:<var>expr</var> (<em>output,per-stream</em>)</samp></dt>
 <dt><samp>-force_key_frames[:<var>stream_specifier</var>] source (<em>output,per-stream</em>)</samp></dt>
+<dt><samp>-force_key_frames[:<var>stream_specifier</var>] source_no_drop (<em>output,per-stream</em>)</samp></dt>
 <dd>
 <p><var>force_key_frames</var> can take arguments of the following form:
 </p>
@@ -1657,6 +1666,13 @@ starting from second 13:
 <dt><samp>source</samp></dt>
 <dd><p>If the argument is <code>source</code>, ffmpeg will force a key frame if
 the current frame being encoded is marked as a key frame in its source.
+</p>
+</dd>
+<dt><samp>source_no_drop</samp></dt>
+<dd><p>If the argument is <code>source_no_drop</code>, ffmpeg will force a key frame if
+the current frame being encoded is marked as a key frame in its source.
+In cases where this particular source frame has to be dropped,
+enforce the next available frame to become a key frame instead.
 </p>
 </dd>
 </dl>
@@ -2221,14 +2237,22 @@ Shows real, system and user time used in various steps (audio/video encode/decod
 <dt><samp>-hex (<em>global</em>)</samp></dt>
 <dd><p>When dumping packets, also dump the payload.
 </p></dd>
+<dt><samp>-readrate <var>speed</var> (<em>input</em>)</samp></dt>
+<dd><p>Limit input read speed.
+</p>
+<p>Its value is a floating-point positive number which represents the maximum duration of
+media, in seconds, that should be ingested in one second of wallclock time.
+Default value is zero and represents no imposed limitation on speed of ingestion.
+Value <code>1</code> represents real-time speed and is equivalent to <code>-re</code>.
+</p>
+<p>Mainly used to simulate a capture device or live input stream (e.g. when reading from a file).
+Should not be used with a low value when input is an actual capture device or live stream as
+it may cause packet loss.
+</p>
+<p>It is useful for when flow speed of output packets is important, such as live streaming.
+</p></dd>
 <dt><samp>-re (<em>input</em>)</samp></dt>
-<dd><p>Read input at native frame rate. Mainly used to simulate a grab device,
-or live input stream (e.g. when reading from a file). Should not be used
-with actual grab devices or live input streams (where it can cause packet
-loss).
-By default <code>ffmpeg</code> attempts to read the input(s) as fast as possible.
-This option will slow down the reading of the input(s) to the native frame rate
-of the input(s). It is useful for real-time output (e.g. live streaming).
+<dd><p>Read input at native frame rate. This is equivalent to setting <code>-readrate 1</code>.
 </p></dd>
 <dt><samp>-vsync <var>parameter</var></samp></dt>
 <dd><p>Video sync method.
