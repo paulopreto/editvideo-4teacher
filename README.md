@@ -47,13 +47,13 @@ juntavideo nome_da_pasta_de_videos 1
 * Exemplo para fazer a junção na ordem que foi criado no exemplo do corte deste tutorial. Abra o arquivo "listvideo.txt" e mude os arquivos:
 
 file 'nome_do_video.mp4 00:00:17 00:01:17' \
-file 'nome_do_video.mp4 00:02:23 00:03:27' \
+file 'nome_do_video.mp4 00:02:23 00:03:27' 
 
 
 * Caso queira trocar a ordem inverta as linhas do arquivo:
 
 file 'nome_do_video.mp4 00:02:23 00:03:27' \
-file 'nome_do_video.mp4 00:00:17 00:01:17' \
+file 'nome_do_video.mp4 00:00:17 00:01:17' 
 
 
 * Assim, o arquivo de vídeo final terá o vídeo "nome_do_video.mp4 00:02:23 00:03:27" no início.
