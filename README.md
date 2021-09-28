@@ -19,7 +19,7 @@ Source Code: https://github.com/paulopreto/editvideo-4teacher
 
 # Agora execute os comandos para cortar um vídeo:
 
-cortavideo nome_do_video.mp4 00:00:17 00:01:17
+cortavideo nome_do_video.mp4 00:00:17 00:01:17<br/>
 cortavideo nome_do_video.mp4 00:02:23 00:03:27
 
 
