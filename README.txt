@@ -8,7 +8,7 @@ Source Code: https://github.com/paulopreto/editvideo-4teacher
 
 # Como instalar em Windows
 * Instale o git.exe <https://git-scm.com/> --> É só ir avançando dando next, next, next... até acabar.
-* Instale o vlc-3.0.16-win64.exe --> Também é só ir avançando até acabar.
+* Instale o VLC --> Também é só ir avançando até acabar.
 * PS. O VLC é opcional você pode usar qualquer Player de vídeo para anotar os tempos.
 * Duplo clique com o botão esquerdo do mouse no arquivo install_parte1.bat
 * Clique com o direito e "Executar como administrador" o install_parte2.bat
@@ -19,7 +19,7 @@ Source Code: https://github.com/paulopreto/editvideo-4teacher
 
 # Agora execute os comandos para cortar um vídeo:
 
-cortavideo nome_do_video.mp4 00:00:17 00:01:17
+cortavideo nome_do_video.mp4 00:00:17 00:01:17<br/>
 cortavideo nome_do_video.mp4 00:02:23 00:03:27
 
 
@@ -46,14 +46,14 @@ juntavideo nome_da_pasta_de_videos 1
 * Caso precise mudar a ordem ou remover vídeos da junção, basta trocar as posições das linhas do arquivo "listvideo.txt" ou apagar linhas e salvar o arquivo.
 * Exemplo para fazer a junção na ordem que foi criado no exemplo do corte deste tutorial. Abra o arquivo "listvideo.txt" e mude os arquivos:
 
-file 'nome_do_video.mp4 00:00:17 00:01:17'
-file 'nome_do_video.mp4 00:02:23 00:03:27'
+file 'nome_do_video.mp4 00:00:17 00:01:17' \
+file 'nome_do_video.mp4 00:02:23 00:03:27' 
 
 
 * Caso queira trocar a ordem inverta as linhas do arquivo:
 
-file 'nome_do_video.mp4 00:02:23 00:03:27'
-file 'nome_do_video.mp4 00:00:17 00:01:17'
+file 'nome_do_video.mp4 00:02:23 00:03:27' \
+file 'nome_do_video.mp4 00:00:17 00:01:17' 
 
 
 * Assim, o arquivo de vídeo final terá o vídeo "nome_do_video.mp4 00:02:23 00:03:27" no início.
@@ -62,5 +62,3 @@ file 'nome_do_video.mp4 00:00:17 00:01:17'
 * Isso irá ajudar a identificar qual o vídeo é o da pós junção.
 
 ## Dúvidas e sujestões entre em contato comigo pelo email: paulopreto@gmail.com
-
-
