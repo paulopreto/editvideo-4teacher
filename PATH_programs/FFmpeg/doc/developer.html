@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
   <head>
     <meta charset="utf-8">
     <title>
@@ -21,7 +21,7 @@
 
 <a name="SEC_Top"></a>
 
-<span id="SEC_Contents"></span>
+<div class="Contents_element" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
 
 <div class="contents">
@@ -62,7 +62,7 @@
   </ul></li>
 </ul>
 </div>
-
+</div>
 
 <a name="Notes-for-external-developers"></a>
 <h2 class="chapter">1 Notes for external developers<span class="pull-right"><a class="anchor hidden-xs" href="#Notes-for-external-developers" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Notes-for-external-developers" aria-hidden="true">TOC</a></span></h2>
@@ -278,7 +278,7 @@ autocmd InsertEnter * match ForbiddenWhitespace /\t\|\s\+\%#\@&lt;!$/
 </pre></div>
 
 <p>For Emacs, add these roughly equivalent lines to your <samp>.emacs.d/init.el</samp>:
-</p><div class="lisp">
+</p><div class="example lisp">
 <pre class="lisp">(c-add-style &quot;ffmpeg&quot;
              '(&quot;k&amp;r&quot;
                (c-basic-offset . 4)
@@ -539,6 +539,20 @@ patch is inline or attached per mail.
 You can check <a href="https://patchwork.ffmpeg.org">https://patchwork.ffmpeg.org</a>, if your patch does not show up, its mime type
 likely was wrong.
 </p>
+<a name="Sending-patches-from-email-clients"></a>
+<p>Using <code>git send-email</code> might not be desirable for everyone. The
+following trick allows to send patches via email clients in a safe
+way. It has been tested with Outlook and Thunderbird (with X-Unsent
+extension) and might work with other applications.
+</p>
+<p>Create your patch like this:
+</p>
+<pre class="verbatim">git format-patch -s -o &quot;outputfolder&quot; --add-header &quot;X-Unsent: 1&quot; --suffix .eml --to ffmpeg-devel@ffmpeg.org -1 1a2b3c4d
+</pre>
+<p>Now you&rsquo;ll just need to open the eml file with the email application
+and execute &rsquo;Send&rsquo;.
+</p>
+<a name="Reviews"></a>
 <p>Your patch will be reviewed on the mailing list. You will likely be asked
 to make some changes and are expected to send in an improved version that
 incorporates the requests from the review. This process may go through
@@ -854,9 +868,8 @@ with a news entry for the website.
 </li><li> Send an announcement to the mailing list.
 </li></ol>
 
-
       <p style="font-size: small;">
-        This document was generated using <a href="http://www.gnu.org/software/texinfo/"><em>makeinfo</em></a>.
+        This document was generated using <a href="https://www.gnu.org/software/texinfo/"><em>makeinfo</em></a>.
       </p>
     </div>
   </body>

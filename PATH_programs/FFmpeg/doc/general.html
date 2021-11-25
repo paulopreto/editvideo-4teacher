@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
   <head>
     <meta charset="utf-8">
     <title>
@@ -21,7 +21,7 @@
 
 <a name="SEC_Top"></a>
 
-<span id="SEC_Contents"></span>
+<div class="Contents_element" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
 
 <div class="contents">
@@ -75,7 +75,7 @@
   </ul></li>
 </ul>
 </div>
-
+</div>
 
 <a name="External-libraries"></a>
 <h2 class="chapter">1 External libraries<span class="pull-right"><a class="anchor hidden-xs" href="#External-libraries" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-External-libraries" aria-hidden="true">TOC</a></span></h2>
@@ -630,6 +630,7 @@ library:
 <tr><td width="40%">raw NULL</td><td width="10%">X</td><td width="10%"></td></tr>
 <tr><td width="40%">raw video</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw id RoQ</td><td width="10%">X</td><td width="10%"></td></tr>
+<tr><td width="40%">raw OBU</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw SBC</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw Shorten</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">raw TAK</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -742,6 +743,7 @@ following image formats are supported:
 <tr><td width="40%">DPX</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Digital Picture Exchange</td></tr>
 <tr><td width="40%">EXR</td><td width="10%"></td><td width="10%">X</td><td width="40%">OpenEXR</td></tr>
 <tr><td width="40%">FITS</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Flexible Image Transport System</td></tr>
+<tr><td width="40%">IMG</td><td width="10%"></td><td width="10%">X</td><td width="40%">GEM Raster image</td></tr>
 <tr><td width="40%">JPEG</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Progressive JPEG is not supported.</td></tr>
 <tr><td width="40%">JPEG 2000</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">JPEG-LS</td><td width="10%">X</td><td width="10%">X</td></tr>
@@ -924,7 +926,7 @@ following image formats are supported:
 <tr><td width="40%">Q-team QPEG</td><td width="10%"></td><td width="10%">X</td><td width="40%">fourccs: QPEG, Q1.0, Q1.1</td></tr>
 <tr><td width="40%">QuickTime 8BPS video</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">QuickTime Animation (RLE) video</td><td width="10%">X</td><td width="10%">X</td><td width="40%">fourcc: &rsquo;rle &rsquo;</td></tr>
-<tr><td width="40%">QuickTime Graphics (SMC)</td><td width="10%"></td><td width="10%">X</td><td width="40%">fourcc: &rsquo;smc &rsquo;</td></tr>
+<tr><td width="40%">QuickTime Graphics (SMC)</td><td width="10%">X</td><td width="10%">X</td><td width="40%">fourcc: &rsquo;smc &rsquo;</td></tr>
 <tr><td width="40%">QuickTime video (RPZA)</td><td width="10%">X</td><td width="10%">X</td><td width="40%">fourcc: rpza</td></tr>
 <tr><td width="40%">R10K AJA Kona 10-bit RGB Codec</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">R210 Quicktime Uncompressed RGB 10-bit</td><td width="10%">X</td><td width="10%">X</td></tr>
@@ -1083,7 +1085,7 @@ following image formats are supported:
 <tr><td width="40%">GSM</td><td width="10%">E</td><td width="10%">X</td><td width="40%">encoding supported through external library libgsm</td></tr>
 <tr><td width="40%">GSM Microsoft variant</td><td width="10%">E</td><td width="10%">X</td><td width="40%">encoding supported through external library libgsm</td></tr>
 <tr><td width="40%">IAC (Indeo Audio Coder)</td><td width="10%"></td><td width="10%">X</td></tr>
-<tr><td width="40%">iLBC (Internet Low Bitrate Codec)</td><td width="10%">E</td><td width="10%">E</td><td width="40%">encoding and decoding supported through external library libilbc</td></tr>
+<tr><td width="40%">iLBC (Internet Low Bitrate Codec)</td><td width="10%">E</td><td width="10%">EX</td><td width="40%">encoding and decoding supported through external library libilbc</td></tr>
 <tr><td width="40%">IMC (Intel Music Coder)</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Interplay ACM</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">MACE (Macintosh Audio Compression/Expansion) 3:1</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -1142,7 +1144,7 @@ following image formats are supported:
 <tr><td width="40%">SMPTE 302M AES3 audio</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">Sonic</td><td width="10%">X</td><td width="10%">X</td><td width="40%">experimental codec</td></tr>
 <tr><td width="40%">Sonic lossless</td><td width="10%">X</td><td width="10%">X</td><td width="40%">experimental codec</td></tr>
-<tr><td width="40%">Speex</td><td width="10%">E</td><td width="10%">E</td><td width="40%">supported through external library libspeex</td></tr>
+<tr><td width="40%">Speex</td><td width="10%">E</td><td width="10%">EX</td><td width="40%">supported through external library libspeex</td></tr>
 <tr><td width="40%">TAK (Tom&rsquo;s lossless Audio Kompressor)</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">True Audio (TTA)</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">TrueHD</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Used in HD-DVD and Blu-Ray discs.</td></tr>
@@ -1282,9 +1284,8 @@ performance on systems without hardware floating point support).
 <tr><td width="40%">MXF</td><td width="10%">X</td><td width="10%">X</td></tr>
 </table>
 
-
       <p style="font-size: small;">
-        This document was generated using <a href="http://www.gnu.org/software/texinfo/"><em>makeinfo</em></a>.
+        This document was generated using <a href="https://www.gnu.org/software/texinfo/"><em>makeinfo</em></a>.
       </p>
     </div>
   </body>

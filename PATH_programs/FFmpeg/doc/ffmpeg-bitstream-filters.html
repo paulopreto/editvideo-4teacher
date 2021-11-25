@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
   <head>
     <meta charset="utf-8">
     <title>
@@ -21,7 +21,7 @@
 
 <a name="SEC_Top"></a>
 
-<span id="SEC_Contents"></span>
+<div class="Contents_element" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
 
 <div class="contents">
@@ -72,7 +72,7 @@
   <li><a id="toc-Authors" href="#Authors">4 Authors</a></li>
 </ul>
 </div>
-
+</div>
 
 <a name="Description"></a>
 <h2 class="chapter">1 Description<span class="pull-right"><a class="anchor hidden-xs" href="#Description" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Description" aria-hidden="true">TOC</a></span></h2>
@@ -130,64 +130,64 @@ that it is auto-inserted for MP4A-LATM and MOV/MP4 and related formats.
 <p>Modify metadata embedded in an AV1 stream.
 </p>
 <dl compact="compact">
-<dt><samp>td</samp></dt>
+<dt><span><samp>td</samp></span></dt>
 <dd><p>Insert or remove temporal delimiter OBUs in all temporal units of the
 stream.
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>insert</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>insert</samp>&rsquo;</span></dt>
 <dd><p>Insert a TD at the beginning of every TU which does not already have one.
 </p></dd>
-<dt>&lsquo;<samp>remove</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>remove</samp>&rsquo;</span></dt>
 <dd><p>Remove the TD from the beginning of every TU which has one.
 </p></dd>
 </dl>
 
 </dd>
-<dt><samp>color_primaries</samp></dt>
-<dt><samp>transfer_characteristics</samp></dt>
-<dt><samp>matrix_coefficients</samp></dt>
+<dt><span><samp>color_primaries</samp></span></dt>
+<dt><span><samp>transfer_characteristics</samp></span></dt>
+<dt><span><samp>matrix_coefficients</samp></span></dt>
 <dd><p>Set the color description fields in the stream (see AV1 section 6.4.2).
 </p>
 </dd>
-<dt><samp>color_range</samp></dt>
+<dt><span><samp>color_range</samp></span></dt>
 <dd><p>Set the color range in the stream (see AV1 section 6.4.2; note that
 this cannot be set for streams using BT.709 primaries, sRGB transfer
 characteristic and identity (RGB) matrix coefficients).
 </p><dl compact="compact">
-<dt>&lsquo;<samp>tv</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>tv</samp>&rsquo;</span></dt>
 <dd><p>Limited range.
 </p></dd>
-<dt>&lsquo;<samp>pc</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>pc</samp>&rsquo;</span></dt>
 <dd><p>Full range.
 </p></dd>
 </dl>
 
 </dd>
-<dt><samp>chroma_sample_position</samp></dt>
+<dt><span><samp>chroma_sample_position</samp></span></dt>
 <dd><p>Set the chroma sample location in the stream (see AV1 section 6.4.2).
 This can only be set for 4:2:0 streams.
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>vertical</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>vertical</samp>&rsquo;</span></dt>
 <dd><p>Left position (matching the default in MPEG-2 and H.264).
 </p></dd>
-<dt>&lsquo;<samp>colocated</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>colocated</samp>&rsquo;</span></dt>
 <dd><p>Top-left position.
 </p></dd>
 </dl>
 
 </dd>
-<dt><samp>tick_rate</samp></dt>
+<dt><span><samp>tick_rate</samp></span></dt>
 <dd><p>Set the tick rate (<em>num_units_in_display_tick / time_scale</em>) in
 the timing info in the sequence header.
 </p></dd>
-<dt><samp>num_ticks_per_picture</samp></dt>
+<dt><span><samp>num_ticks_per_picture</samp></span></dt>
 <dd><p>Set the number of ticks in each picture, to indicate that the stream
 has a fixed framerate.  Ignored if <samp>tick_rate</samp> is not also set.
 </p>
 </dd>
-<dt><samp>delete_padding</samp></dt>
+<dt><span><samp>delete_padding</samp></span></dt>
 <dd><p>Deletes Padding OBUs.
 </p>
 </dd>
@@ -212,17 +212,17 @@ said packets already exactly begin with the extradata that is intended
 to be added.
 </p>
 <dl compact="compact">
-<dt><samp>freq</samp></dt>
+<dt><span><samp>freq</samp></span></dt>
 <dd><p>The additional argument specifies which packets should be filtered.
 It accepts the values:
 </p><dl compact="compact">
-<dt>&lsquo;<samp>k</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>keyframe</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>k</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>keyframe</samp>&rsquo;</span></dt>
 <dd><p>add extradata to all key packets
 </p>
 </dd>
-<dt>&lsquo;<samp>e</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>all</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>e</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>all</samp>&rsquo;</span></dt>
 <dd><p>add extradata to all packets
 </p></dd>
 </dl>
@@ -258,7 +258,7 @@ container level). This latter form is called &quot;extradata&quot; in FFmpeg ter
 extradata.
 </p>
 <dl compact="compact">
-<dt><samp>remove</samp></dt>
+<dt><span><samp>remove</samp></span></dt>
 <dd><p>When this option is enabled, the long-term headers are removed from the
 bitstream after extraction.
 </p></dd>
@@ -270,13 +270,13 @@ bitstream after extraction.
 <p>Remove units with types in or not in a given set from the stream.
 </p>
 <dl compact="compact">
-<dt><samp>pass_types</samp></dt>
+<dt><span><samp>pass_types</samp></span></dt>
 <dd><p>List of unit types or ranges of unit types to pass through while removing
 all others.  This is specified as a &rsquo;|&rsquo;-separated list of unit type values
 or ranges of values with &rsquo;-&rsquo;.
 </p>
 </dd>
-<dt><samp>remove_types</samp></dt>
+<dt><span><samp>remove_types</samp></span></dt>
 <dd><p>Identical to <samp>pass_types</samp>, except the units in the given set
 removed and all others passed through.
 </p></dd>
@@ -302,12 +302,12 @@ removed.
 <p>Extract Rgb or Alpha part of an HAPQA file, without recompression, in order to create an HAPQ or an HAPAlphaOnly file.
 </p>
 <dl compact="compact">
-<dt><samp>texture</samp></dt>
+<dt><span><samp>texture</samp></span></dt>
 <dd><p>Specifies the texture to keep.
 </p>
 <dl compact="compact">
-<dt><samp>color</samp></dt>
-<dt><samp>alpha</samp></dt>
+<dt><span><samp>color</samp></span></dt>
+<dt><span><samp>alpha</samp></span></dt>
 </dl>
 
 </dd>
@@ -329,65 +329,65 @@ removed.
 <p>Modify metadata embedded in an H.264 stream.
 </p>
 <dl compact="compact">
-<dt><samp>aud</samp></dt>
+<dt><span><samp>aud</samp></span></dt>
 <dd><p>Insert or remove AUD NAL units in all access units of the stream.
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>insert</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>remove</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>insert</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>remove</samp>&rsquo;</span></dt>
 </dl>
 
 </dd>
-<dt><samp>sample_aspect_ratio</samp></dt>
+<dt><span><samp>sample_aspect_ratio</samp></span></dt>
 <dd><p>Set the sample aspect ratio of the stream in the VUI parameters.
 </p>
 </dd>
-<dt><samp>overscan_appropriate_flag</samp></dt>
+<dt><span><samp>overscan_appropriate_flag</samp></span></dt>
 <dd><p>Set whether the stream is suitable for display using overscan
 or not (see H.264 section E.2.1).
 </p>
 </dd>
-<dt><samp>video_format</samp></dt>
-<dt><samp>video_full_range_flag</samp></dt>
+<dt><span><samp>video_format</samp></span></dt>
+<dt><span><samp>video_full_range_flag</samp></span></dt>
 <dd><p>Set the video format in the stream (see H.264 section E.2.1 and
 table E-2).
 </p>
 </dd>
-<dt><samp>colour_primaries</samp></dt>
-<dt><samp>transfer_characteristics</samp></dt>
-<dt><samp>matrix_coefficients</samp></dt>
+<dt><span><samp>colour_primaries</samp></span></dt>
+<dt><span><samp>transfer_characteristics</samp></span></dt>
+<dt><span><samp>matrix_coefficients</samp></span></dt>
 <dd><p>Set the colour description in the stream (see H.264 section E.2.1
 and tables E-3, E-4 and E-5).
 </p>
 </dd>
-<dt><samp>chroma_sample_loc_type</samp></dt>
+<dt><span><samp>chroma_sample_loc_type</samp></span></dt>
 <dd><p>Set the chroma sample location in the stream (see H.264 section
 E.2.1 and figure E-1).
 </p>
 </dd>
-<dt><samp>tick_rate</samp></dt>
+<dt><span><samp>tick_rate</samp></span></dt>
 <dd><p>Set the tick rate (num_units_in_tick / time_scale) in the VUI
 parameters.  This is the smallest time unit representable in the
 stream, and in many cases represents the field rate of the stream
 (double the frame rate).
 </p></dd>
-<dt><samp>fixed_frame_rate_flag</samp></dt>
+<dt><span><samp>fixed_frame_rate_flag</samp></span></dt>
 <dd><p>Set whether the stream has fixed framerate - typically this indicates
 that the framerate is exactly half the tick rate, but the exact
 meaning is dependent on interlacing and the picture structure (see
 H.264 section E.2.1 and table E-6).
 </p></dd>
-<dt><samp>zero_new_constraint_set_flags</samp></dt>
+<dt><span><samp>zero_new_constraint_set_flags</samp></span></dt>
 <dd><p>Zero constraint_set4_flag and constraint_set5_flag in the SPS. These
 bits were reserved in a previous version of the H.264 spec, and thus
 some hardware decoders require these to be zero. The result of zeroing
 this is still a valid bitstream.
 </p>
 </dd>
-<dt><samp>crop_left</samp></dt>
-<dt><samp>crop_right</samp></dt>
-<dt><samp>crop_top</samp></dt>
-<dt><samp>crop_bottom</samp></dt>
+<dt><span><samp>crop_left</samp></span></dt>
+<dt><span><samp>crop_right</samp></span></dt>
+<dt><span><samp>crop_top</samp></span></dt>
+<dt><span><samp>crop_bottom</samp></span></dt>
 <dd><p>Set the frame cropping offsets in the SPS.  These values will replace
 the current ones if the stream is already cropped.
 </p>
@@ -396,7 +396,7 @@ representable if the chroma is subsampled or the stream is interlaced
 (see H.264 section 7.4.2.1.1).
 </p>
 </dd>
-<dt><samp>sei_user_data</samp></dt>
+<dt><span><samp>sei_user_data</samp></span></dt>
 <dd><p>Insert a string as SEI unregistered user data.  The argument must
 be of the form <em>UUID+string</em>, where the UUID is as hex digits
 possibly separated by hyphens, and the string can be anything.
@@ -405,11 +405,11 @@ possibly separated by hyphens, and the string can be anything.
 insert the string &ldquo;hello&rdquo; associated with the given UUID.
 </p>
 </dd>
-<dt><samp>delete_filler</samp></dt>
+<dt><span><samp>delete_filler</samp></span></dt>
 <dd><p>Deletes both filler NAL units and filler SEI messages.
 </p>
 </dd>
-<dt><samp>level</samp></dt>
+<dt><span><samp>level</samp></span></dt>
 <dd><p>Set the level in the SPS.  Refer to H.264 section A.3 and tables A-1
 to A-5.
 </p>
@@ -457,54 +457,54 @@ within the stream are removed.
 <p>Modify metadata embedded in an HEVC stream.
 </p>
 <dl compact="compact">
-<dt><samp>aud</samp></dt>
+<dt><span><samp>aud</samp></span></dt>
 <dd><p>Insert or remove AUD NAL units in all access units of the stream.
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>insert</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>remove</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>insert</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>remove</samp>&rsquo;</span></dt>
 </dl>
 
 </dd>
-<dt><samp>sample_aspect_ratio</samp></dt>
+<dt><span><samp>sample_aspect_ratio</samp></span></dt>
 <dd><p>Set the sample aspect ratio in the stream in the VUI parameters.
 </p>
 </dd>
-<dt><samp>video_format</samp></dt>
-<dt><samp>video_full_range_flag</samp></dt>
+<dt><span><samp>video_format</samp></span></dt>
+<dt><span><samp>video_full_range_flag</samp></span></dt>
 <dd><p>Set the video format in the stream (see H.265 section E.3.1 and
 table E.2).
 </p>
 </dd>
-<dt><samp>colour_primaries</samp></dt>
-<dt><samp>transfer_characteristics</samp></dt>
-<dt><samp>matrix_coefficients</samp></dt>
+<dt><span><samp>colour_primaries</samp></span></dt>
+<dt><span><samp>transfer_characteristics</samp></span></dt>
+<dt><span><samp>matrix_coefficients</samp></span></dt>
 <dd><p>Set the colour description in the stream (see H.265 section E.3.1
 and tables E.3, E.4 and E.5).
 </p>
 </dd>
-<dt><samp>chroma_sample_loc_type</samp></dt>
+<dt><span><samp>chroma_sample_loc_type</samp></span></dt>
 <dd><p>Set the chroma sample location in the stream (see H.265 section
 E.3.1 and figure E.1).
 </p>
 </dd>
-<dt><samp>tick_rate</samp></dt>
+<dt><span><samp>tick_rate</samp></span></dt>
 <dd><p>Set the tick rate in the VPS and VUI parameters (num_units_in_tick /
 time_scale).  Combined with <samp>num_ticks_poc_diff_one</samp>, this can
 set a constant framerate in the stream.  Note that it is likely to be
 overridden by container parameters when the stream is in a container.
 </p>
 </dd>
-<dt><samp>num_ticks_poc_diff_one</samp></dt>
+<dt><span><samp>num_ticks_poc_diff_one</samp></span></dt>
 <dd><p>Set poc_proportional_to_timing_flag in VPS and VUI and use this value
 to set num_ticks_poc_diff_one_minus1 (see H.265 sections 7.4.3.1 and
 E.3.1).  Ignored if <samp>tick_rate</samp> is not also set.
 </p>
 </dd>
-<dt><samp>crop_left</samp></dt>
-<dt><samp>crop_right</samp></dt>
-<dt><samp>crop_top</samp></dt>
-<dt><samp>crop_bottom</samp></dt>
+<dt><span><samp>crop_left</samp></span></dt>
+<dt><span><samp>crop_right</samp></span></dt>
+<dt><span><samp>crop_top</samp></span></dt>
+<dt><span><samp>crop_bottom</samp></span></dt>
 <dd><p>Set the conformance window cropping offsets in the SPS.  These values
 will replace the current ones if the stream is already cropped.
 </p>
@@ -512,7 +512,7 @@ will replace the current ones if the stream is already cropped.
 representable if the chroma is subsampled (H.265 section 7.4.3.2.1).
 </p>
 </dd>
-<dt><samp>level</samp></dt>
+<dt><span><samp>level</samp></span></dt>
 <dd><p>Set the level in the VPS and SPS.  See H.265 section A.4 and tables
 A.6 and A.7.
 </p>
@@ -622,20 +622,20 @@ metadata header from each subtitle packet.
 <p>Modify metadata embedded in an MPEG-2 stream.
 </p>
 <dl compact="compact">
-<dt><samp>display_aspect_ratio</samp></dt>
+<dt><span><samp>display_aspect_ratio</samp></span></dt>
 <dd><p>Set the display aspect ratio in the stream.
 </p>
 <p>The following fixed values are supported:
 </p><dl compact="compact">
-<dt><samp>4/3</samp></dt>
-<dt><samp>16/9</samp></dt>
-<dt><samp>221/100</samp></dt>
+<dt><span><samp>4/3</samp></span></dt>
+<dt><span><samp>16/9</samp></span></dt>
+<dt><span><samp>221/100</samp></span></dt>
 </dl>
 <p>Any other value will result in square pixels being signalled instead
 (see H.262 section 6.3.3 and table 6-3).
 </p>
 </dd>
-<dt><samp>frame_rate</samp></dt>
+<dt><span><samp>frame_rate</samp></span></dt>
 <dd><p>Set the frame rate in the stream.  This is constructed from a table
 of known values combined with a small multiplier and divisor - if
 the supplied value is not exactly representable, the nearest
@@ -643,14 +643,14 @@ representable value will be used instead (see H.262 section 6.3.3
 and table 6-4).
 </p>
 </dd>
-<dt><samp>video_format</samp></dt>
+<dt><span><samp>video_format</samp></span></dt>
 <dd><p>Set the video format in the stream (see H.262 section 6.3.6 and
 table 6-6).
 </p>
 </dd>
-<dt><samp>colour_primaries</samp></dt>
-<dt><samp>transfer_characteristics</samp></dt>
-<dt><samp>matrix_coefficients</samp></dt>
+<dt><span><samp>colour_primaries</samp></span></dt>
+<dt><span><samp>transfer_characteristics</samp></span></dt>
+<dt><span><samp>matrix_coefficients</samp></span></dt>
 <dd><p>Set the colour description in the stream (see H.262 section 6.3.6
 and tables 6-7, 6-8 and 6-9).
 </p>
@@ -686,19 +686,19 @@ container. Can be used for fuzzing or testing error resilience/concealment.
 </p>
 <p>Parameters:
 </p><dl compact="compact">
-<dt><samp>amount</samp></dt>
+<dt><span><samp>amount</samp></span></dt>
 <dd><p>Accepts an expression whose evaluation per-packet determines how often bytes in that
 packet will be modified. A value below 0 will result in a variable frequency.
 Default is 0 which results in no modification. However, if neither amount nor drop is specified,
 amount will be set to <var>-1</var>. See below for accepted variables.
 </p></dd>
-<dt><samp>drop</samp></dt>
+<dt><span><samp>drop</samp></span></dt>
 <dd><p>Accepts an expression evaluated per-packet whose value determines whether that packet is dropped.
 Evaluation to a positive value results in the packet being dropped. Evaluation to a negative
 value results in a variable chance of it being dropped, roughly inverse in proportion to the magnitude
 of the value. Default is 0 which results in no drops. See below for accepted variables.
 </p></dd>
-<dt><samp>dropamount</samp></dt>
+<dt><span><samp>dropamount</samp></span></dt>
 <dd><p>Accepts a non-negative integer, which assigns a variable chance of it being dropped, roughly inverse
 in proportion to the value. Default is 0 which results in no drops. This option is kept for backwards
 compatibility and is equivalent to setting drop to a negative value with the same magnitude
@@ -709,41 +709,41 @@ i.e. <code>dropamount=4</code> is the same as <code>drop=-4</code>. Ignored if d
 <p>Both <code>amount</code> and <code>drop</code> accept expressions containing the following variables:
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>n</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>n</samp>&rsquo;</span></dt>
 <dd><p>The index of the packet, starting from zero.
 </p></dd>
-<dt>&lsquo;<samp>tb</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>tb</samp>&rsquo;</span></dt>
 <dd><p>The timebase for packet timestamps.
 </p></dd>
-<dt>&lsquo;<samp>pts</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>pts</samp>&rsquo;</span></dt>
 <dd><p>Packet presentation timestamp.
 </p></dd>
-<dt>&lsquo;<samp>dts</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>dts</samp>&rsquo;</span></dt>
 <dd><p>Packet decoding timestamp.
 </p></dd>
-<dt>&lsquo;<samp>nopts</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>nopts</samp>&rsquo;</span></dt>
 <dd><p>Constant representing AV_NOPTS_VALUE.
 </p></dd>
-<dt>&lsquo;<samp>startpts</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>startpts</samp>&rsquo;</span></dt>
 <dd><p>First non-AV_NOPTS_VALUE PTS seen in the stream.
 </p></dd>
-<dt>&lsquo;<samp>startdts</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>startdts</samp>&rsquo;</span></dt>
 <dd><p>First non-AV_NOPTS_VALUE DTS seen in the stream.
 </p></dd>
-<dt>&lsquo;<samp>duration</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>d</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>duration</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>d</samp>&rsquo;</span></dt>
 <dd><p>Packet duration, in timebase units.
 </p></dd>
-<dt>&lsquo;<samp>pos</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>pos</samp>&rsquo;</span></dt>
 <dd><p>Packet position in input; may be -1 when unknown or not set.
 </p></dd>
-<dt>&lsquo;<samp>size</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>size</samp>&rsquo;</span></dt>
 <dd><p>Packet size, in bytes.
 </p></dd>
-<dt>&lsquo;<samp>key</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>key</samp>&rsquo;</span></dt>
 <dd><p>Whether packet is marked as a keyframe.
 </p></dd>
-<dt>&lsquo;<samp>state</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>state</samp>&rsquo;</span></dt>
 <dd><p>A pseudo random integer, primarily derived from the content of packet payload.
 </p></dd>
 </dl>
@@ -774,22 +774,22 @@ modify any of the remaining packets.
 <h3 class="section">2.24 pcm_rechunk<span class="pull-right"><a class="anchor hidden-xs" href="#pcm_005frechunk" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-pcm_005frechunk" aria-hidden="true">TOC</a></span></h3>
 
 <p>Repacketize PCM audio to a fixed number of samples per packet or a fixed packet
-rate per second. This is similar to the <a href="ffmpeg-filters.html#asetnsamples">(ffmpeg-filters)asetnsamples audio
+rate per second. This is similar to the <a data-manual="ffmpeg-filters" href="ffmpeg-filters.html#asetnsamples">(ffmpeg-filters)asetnsamples audio
 filter</a> but works on audio packets instead of audio frames.
 </p>
 <dl compact="compact">
-<dt><samp>nb_out_samples, n</samp></dt>
+<dt><span><samp>nb_out_samples, n</samp></span></dt>
 <dd><p>Set the number of samples per each output audio packet. The number is intended
 as the number of samples <em>per each channel</em>. Default value is 1024.
 </p>
 </dd>
-<dt><samp>pad, p</samp></dt>
+<dt><span><samp>pad, p</samp></span></dt>
 <dd><p>If set to 1, the filter will pad the last audio packet with silence, so that it
 will contain the same number of samples (or roughly the same number of samples,
 see <samp>frame_rate</samp>) as the previous ones. Default value is 1.
 </p>
 </dd>
-<dt><samp>frame_rate, r</samp></dt>
+<dt><span><samp>frame_rate, r</samp></span></dt>
 <dd><p>This option makes the filter output a fixed number of packets per second instead
 of a fixed number of samples per packet. If the audio sample rate is not
 divisible by the frame rate then the number of samples will not be constant but
@@ -810,76 +810,76 @@ for NTSC frame rate using the <samp>frame_rate</samp> option.
 <p>Modify color property metadata embedded in prores stream.
 </p>
 <dl compact="compact">
-<dt><samp>color_primaries</samp></dt>
+<dt><span><samp>color_primaries</samp></span></dt>
 <dd><p>Set the color primaries.
 Available values are:
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>auto</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>auto</samp>&rsquo;</span></dt>
 <dd><p>Keep the same color primaries property (default).
 </p>
 </dd>
-<dt>&lsquo;<samp>unknown</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>bt709</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>bt470bg</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>unknown</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>bt709</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>bt470bg</samp>&rsquo;</span></dt>
 <dd><p>BT601 625
 </p>
 </dd>
-<dt>&lsquo;<samp>smpte170m</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>smpte170m</samp>&rsquo;</span></dt>
 <dd><p>BT601 525
 </p>
 </dd>
-<dt>&lsquo;<samp>bt2020</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>smpte431</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>bt2020</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>smpte431</samp>&rsquo;</span></dt>
 <dd><p>DCI P3
 </p>
 </dd>
-<dt>&lsquo;<samp>smpte432</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>smpte432</samp>&rsquo;</span></dt>
 <dd><p>P3 D65
 </p>
 </dd>
 </dl>
 
 </dd>
-<dt><samp>transfer_characteristics</samp></dt>
+<dt><span><samp>transfer_characteristics</samp></span></dt>
 <dd><p>Set the color transfer.
 Available values are:
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>auto</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>auto</samp>&rsquo;</span></dt>
 <dd><p>Keep the same transfer characteristics property (default).
 </p>
 </dd>
-<dt>&lsquo;<samp>unknown</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>bt709</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>unknown</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>bt709</samp>&rsquo;</span></dt>
 <dd><p>BT 601, BT 709, BT 2020
 </p></dd>
-<dt>&lsquo;<samp>smpte2084</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>smpte2084</samp>&rsquo;</span></dt>
 <dd><p>SMPTE ST 2084
 </p></dd>
-<dt>&lsquo;<samp>arib-std-b67</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>arib-std-b67</samp>&rsquo;</span></dt>
 <dd><p>ARIB STD-B67
 </p></dd>
 </dl>
 
 
 </dd>
-<dt><samp>matrix_coefficients</samp></dt>
+<dt><span><samp>matrix_coefficients</samp></span></dt>
 <dd><p>Set the matrix coefficient.
 Available values are:
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>auto</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>auto</samp>&rsquo;</span></dt>
 <dd><p>Keep the same colorspace property (default).
 </p>
 </dd>
-<dt>&lsquo;<samp>unknown</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>bt709</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>smpte170m</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>unknown</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>bt709</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>smpte170m</samp>&rsquo;</span></dt>
 <dd><p>BT 601
 </p>
 </dd>
-<dt>&lsquo;<samp>bt2020nc</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>bt2020nc</samp>&rsquo;</span></dt>
 </dl>
 </dd>
 </dl>
@@ -901,19 +901,19 @@ Available values are:
 </p>
 <p>It accepts the following parameter:
 </p><dl compact="compact">
-<dt><samp>freq</samp></dt>
+<dt><span><samp>freq</samp></span></dt>
 <dd><p>Set which frame types to remove extradata from.
 </p>
 <dl compact="compact">
-<dt>&lsquo;<samp>k</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>k</samp>&rsquo;</span></dt>
 <dd><p>Remove extradata from non-keyframes only.
 </p>
 </dd>
-<dt>&lsquo;<samp>keyframe</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>keyframe</samp>&rsquo;</span></dt>
 <dd><p>Remove extradata from keyframes only.
 </p>
 </dd>
-<dt>&lsquo;<samp>e, all</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>e, all</samp>&rsquo;</span></dt>
 <dd><p>Remove extradata from all frames.
 </p>
 </dd>
@@ -927,9 +927,9 @@ Available values are:
 </p>
 <p>It accepts the following parameters:
 </p><dl compact="compact">
-<dt><samp>ts</samp></dt>
-<dt><samp>pts</samp></dt>
-<dt><samp>dts</samp></dt>
+<dt><span><samp>ts</samp></span></dt>
+<dt><span><samp>pts</samp></span></dt>
+<dt><span><samp>dts</samp></span></dt>
 <dd><p>Set expressions for PTS, DTS or both.
 </p></dd>
 </dl>
@@ -938,61 +938,61 @@ Available values are:
 constants:
 </p>
 <dl compact="compact">
-<dt><samp>N</samp></dt>
+<dt><span><samp>N</samp></span></dt>
 <dd><p>The count of the input packet. Starting from 0.
 </p>
 </dd>
-<dt><samp>TS</samp></dt>
+<dt><span><samp>TS</samp></span></dt>
 <dd><p>The demux timestamp in input in case of <code>ts</code> or <code>dts</code> option or presentation
 timestamp in case of <code>pts</code> option.
 </p>
 </dd>
-<dt><samp>POS</samp></dt>
+<dt><span><samp>POS</samp></span></dt>
 <dd><p>The original position in the file of the packet, or undefined if undefined
 for the current packet
 </p>
 </dd>
-<dt><samp>DTS</samp></dt>
+<dt><span><samp>DTS</samp></span></dt>
 <dd><p>The demux timestamp in input.
 </p>
 </dd>
-<dt><samp>PTS</samp></dt>
+<dt><span><samp>PTS</samp></span></dt>
 <dd><p>The presentation timestamp in input.
 </p>
 </dd>
-<dt><samp>STARTDTS</samp></dt>
+<dt><span><samp>STARTDTS</samp></span></dt>
 <dd><p>The DTS of the first packet.
 </p>
 </dd>
-<dt><samp>STARTPTS</samp></dt>
+<dt><span><samp>STARTPTS</samp></span></dt>
 <dd><p>The PTS of the first packet.
 </p>
 </dd>
-<dt><samp>PREV_INDTS</samp></dt>
+<dt><span><samp>PREV_INDTS</samp></span></dt>
 <dd><p>The previous input DTS.
 </p>
 </dd>
-<dt><samp>PREV_INPTS</samp></dt>
+<dt><span><samp>PREV_INPTS</samp></span></dt>
 <dd><p>The previous input PTS.
 </p>
 </dd>
-<dt><samp>PREV_OUTDTS</samp></dt>
+<dt><span><samp>PREV_OUTDTS</samp></span></dt>
 <dd><p>The previous output DTS.
 </p>
 </dd>
-<dt><samp>PREV_OUTPTS</samp></dt>
+<dt><span><samp>PREV_OUTPTS</samp></span></dt>
 <dd><p>The previous output PTS.
 </p>
 </dd>
-<dt><samp>TB</samp></dt>
+<dt><span><samp>TB</samp></span></dt>
 <dd><p>The timebase of stream packet belongs.
 </p>
 </dd>
-<dt><samp>SR</samp></dt>
+<dt><span><samp>SR</samp></span></dt>
 <dd><p>The sample rate of stream packet belongs.
 </p>
 </dd>
-<dt><samp>NOPTS</samp></dt>
+<dt><span><samp>NOPTS</samp></span></dt>
 <dd><p>The AV_NOPTS_VALUE constant.
 </p></dd>
 </dl>
@@ -1026,27 +1026,27 @@ on the build only a subset of these may be available.
 <p>Modify metadata embedded in a VP9 stream.
 </p>
 <dl compact="compact">
-<dt><samp>color_space</samp></dt>
+<dt><span><samp>color_space</samp></span></dt>
 <dd><p>Set the color space value in the frame header.  Note that any frame
 set to RGB will be implicitly set to PC range and that RGB is
 incompatible with profiles 0 and 2.
 </p><dl compact="compact">
-<dt>&lsquo;<samp>unknown</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>bt601</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>bt709</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>smpte170</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>smpte240</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>bt2020</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>rgb</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>unknown</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>bt601</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>bt709</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>smpte170</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>smpte240</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>bt2020</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>rgb</samp>&rsquo;</span></dt>
 </dl>
 
 </dd>
-<dt><samp>color_range</samp></dt>
+<dt><span><samp>color_range</samp></span></dt>
 <dd><p>Set the color range value in the frame header.  Note that any value
 imposed by the color space will take precedence over this value.
 </p><dl compact="compact">
-<dt>&lsquo;<samp>tv</samp>&rsquo;</dt>
-<dt>&lsquo;<samp>pc</samp>&rsquo;</dt>
+<dt><span>&lsquo;<samp>tv</samp>&rsquo;</span></dt>
+<dt><span>&lsquo;<samp>pc</samp>&rsquo;</span></dt>
 </dl>
 </dd>
 </dl>
@@ -1091,9 +1091,8 @@ online repository at <a href="http://source.ffmpeg.org">http://source.ffmpeg.org
 <samp>MAINTAINERS</samp> in the source code tree.
 </p>
 
-
       <p style="font-size: small;">
-        This document was generated using <a href="http://www.gnu.org/software/texinfo/"><em>makeinfo</em></a>.
+        This document was generated using <a href="https://www.gnu.org/software/texinfo/"><em>makeinfo</em></a>.
       </p>
     </div>
   </body>
